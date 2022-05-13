@@ -65,3 +65,8 @@ Carousel组件主要核心是一组卡片在一个公共区域内轮播展示，
 - 轮播代码细节封装为useCarousel自定义hook
 - 消除index.css中slider相关的duration和width硬编码，支持参数配置
 - 完善Slider组件及其他
+
+### 2022.05.13
+- 梳理useCarousel依赖，保持hook和组件的逻辑清晰，切断函数依赖hell
+- 最大限度减少cssProperty设置，同时消除css文件中的硬编码，支持后续灵活扩展
+- 去掉rerequestAnimationFrame，改由数据驱动的方式实现轮播循环
